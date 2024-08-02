@@ -1,0 +1,1450 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Paytone One", sans-serif;
+    overflow-x: hidden;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.animate-on-scroll:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.animate-on-scroll:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+/* Continue this pattern as needed for more elements */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 90vh; /* Full height of the viewport */
+}
+
+.image {
+    flex: 0 0 70vh; /* 70% of the viewport height */
+    background: url('image/main.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.headline {
+    position: absolute;
+    bottom: 20px; /* Positioning at the bottom of the image */
+    left: 100px; /* Margin from the left to align with the text below */
+    color: #A0BCFF; /* Main color of the text */
+    font-family: 'Paytone One', sans-serif; /* Use Paytone One font */
+    font-size: 128px;
+    text-shadow: 3px 3px 0 #FF00FF, /* Pink shadow on the right */
+                 -3px -3px 0 #00FFCC; /* Mint shadow on the left */
+    margin: 0;
+    padding: 0;
+    line-height: 1.1; /* Adjust line-height to reduce spacing */
+}
+
+.top-button {
+    position: absolute;
+    top: 100px; /* Positioning at the top of the image */
+    left: 100px; /* Align with the text on the image */
+    background-color: #A0BCFF;
+    color: black;
+    border: none;
+    border-radius: 37.5px; /* Rounded corners */
+    width: 350px; /* Slightly bigger than the other button */
+    height: 70px; /* Slightly bigger than the other button */
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Paytone One", sans-serif;
+}
+
+.color-block {
+    flex: 0 0 20vh; /* 20% of the viewport height */
+    background-color: #1E48C1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #A0BCFF;
+    padding-left: 100px; /* Align with the text and button on the image */
+}
+
+.color-block .text {
+    color: #A0BCFF;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: "Paytone One", sans-serif;
+}
+
+.cta-button {
+    background-color: #A0BCFF;
+    color: black;
+    border: none;
+    border-radius: 37.5px; /* Rounded corners */
+    width: 300px;
+    height: 75px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 100px; /* Align with the text */
+    font-family: "Paytone One", sans-serif;
+}
+
+.cta-button:hover {
+    background-color: #8aa4d6; /* Slightly darker shade for hover effect */
+}
+
+.second {
+    display: flex;
+    flex-direction: row;
+    height: 90vh; /* Height for the second section */
+    background-color: #A0BCFF;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px; /* Padding for alignment */
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%; /* Ensure the left container takes half the section width */
+    padding-right: 20px; /* Add some padding to the right to create space between text and right image */
+    margin-top: 10%;
+}
+
+.images-container {
+    display: flex;
+    gap: 20px; /* Gap between images */
+    margin-bottom: 20px; /* Space between images and text */
+    justify-content: flex-start; /* Align images to the left */
+    width: 100%; /* Ensure the images container takes full width */
+}
+
+.images-container img {
+    width: 60px;
+    height: 60px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Ensure the text container takes full width */
+}
+
+.sub-headline {
+    color: black; /* Main color of the text */
+    font-family: 'Paytone One', sans-serif; /* Use Paytone One font */
+    font-size: 7rem;
+    text-shadow: 3px 3px 0 #FF00FF, /* Pink shadow on the right */
+                 -3px -3px 0 #00FFCC; /* Mint shadow on the left */
+    margin: 0;
+    padding: 0;
+    line-height: 1.1; /* Adjust line-height to reduce spacing */
+}
+
+.sub-text {
+    color: black;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-top: 20px; /* Space between headline and sub-text */
+    line-height: 1.5; /* Improve readability */
+}
+
+.right-image {
+    display: flex;
+    align-items: flex-start; /* Align to the top */
+    height: 100%;
+    width: 50%; /* Ensure the right image container takes half the section width */
+    justify-content: center; /* Center the image horizontally */
+    padding-left: 20px; /* Add some padding to the left to create space between text and right image */
+    margin-top: 20%;
+}
+
+.right-image img {
+    max-width: 110%;
+    height: auto;
+}
+
+/* Third section */
+.third {
+    display: flex;
+    flex-direction: row;
+    height: 90vh; /* Full height of the viewport */
+    background-color: #051329;
+    padding: 20px 100px; /* Padding for alignment */
+}
+
+.left-third, .right-third {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.third-headline {
+    color: #A0BCFF; /* Main color of the text */
+    font-family: 'Paytone One', sans-serif; /* Use Paytone One font */
+    font-size: 7rem;
+    text-shadow: 3px 3px 0 #FF00FF, /* Pink shadow on the right */
+                 -3px -3px 0 #00FFCC; /* Mint shadow on the left */
+    margin: 0;
+    padding: 0;
+    line-height: 1.1; /* Adjust line-height to reduce spacing */
+    text-align: center; /* Center align the headline */
+}
+
+.left-third {
+    align-items: flex-start; /* Align items to the start (left) */
+    justify-content: flex-start; /* Align items to the top */
+    margin-left: 5%;
+}
+
+.left-third img {
+    width: 480px; 
+    height: 550px;
+    object-fit: cover; /* Ensures the image covers the given dimensions without stretching */
+    margin-top: 20px; /* Add margin to create space between text and image */
+}
+.right-third {
+   align-items: start;
+   margin-left: 20%;
+}
+
+
+.right-third .main-right-image {
+    width: 320px; 
+    height: 350px;
+    object-fit: cover; /* Ensures the image covers the given dimensions without stretching */
+    margin-left: -40%;
+}
+
+.small-images-container {
+    display: flex;
+    gap: 20px; /* Gap between images */
+    margin-top: 20px; /* Space between main right image and small images */
+    
+}
+
+.small-images-container img {
+    width: 60px;
+    height: 60px;
+}
+
+.third-text {
+    color: #A0BCFF;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 20px; /* Space between small images and text */
+    text-align: left;
+
+}
+/* Forth section */
+.forth {
+    display: flex;
+    flex-direction: row;
+    height: 90vh; /* Full height of the viewport */
+    background-color: #1E48C1;
+    position: relative;
+}
+
+.left-forth {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 100px;
+    z-index: 1; /* Ensure left-forth content is above the background image */
+}
+
+.forth-headline {
+    color: #A0BCFF; /* Main color of the text */
+    font-family: 'Paytone One', sans-serif; /* Use Paytone One font */
+    font-size: 7rem;
+    text-shadow: 3px 3px 0 #FF00FF, /* Pink shadow on the right */
+                 -3px -3px 0 #00FFCC; /* Mint shadow on the left */
+    margin: 0;
+    padding: 0;
+    line-height: 1.1; /* Adjust line-height to reduce spacing */
+}
+
+.bottom-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.small-images-container {
+    display: flex;
+    gap: 20px; /* Gap between images */
+    margin-top: 20px; /* Space between headline and small images */
+}
+
+.small-images-container img {
+    width: 60px;
+    height: 60px;
+}
+
+.forth-text {
+    color: #A0BCFF;
+   font-weight: bold;
+    font-size: 1.4rem;
+    margin-top: 20px; /* Space between small images and text */
+    text-align: left;
+}
+
+.right-forth {
+    flex: 1;
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    position: relative;
+    top: 20%;
+    right: 2%;
+}
+
+.main-forth-image {
+    width: 212%;
+    height: 80%;
+    object-fit: cover; /* Ensures the image covers the given dimensions without stretching */
+    position: absolute;
+
+    right: 0;
+    z-index: 0; /* Ensure the image stays in the background */
+}
+/* Fifth section */
+.fifth {
+    display: flex;
+    flex-direction: row;
+    height: 90vh; /* Full height of the viewport */
+    background-color: #A0BCFF;
+    padding: 0 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-fifth {
+    flex: 1;
+    display: flex;
+    align-items: flex-end; /* Align image to the bottom */
+    justify-content: flex-start;
+}
+
+.left-fifth img {
+    width: 130%; /* Make the image bigger */
+    height: auto;
+    margin-bottom: 0; /* Ensure image is at the bottom */
+    margin-top: 34%;
+}
+
+.right-fifth {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 50px; /* Adjust padding to move text more to the right */
+}
+
+.images-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; /* Reduced gap between images */
+    margin-left: auto; /* Align images to the right of the headline */
+    margin-right: 5%;
+}
+
+.images-container img {
+    width: 60px;
+    height: 60px;
+}
+
+.fifth-headline {
+    color: black; /* Main color of the text */
+    font-family: 'Paytone One', sans-serif; /* Use Paytone One font */
+    font-size: 8rem; /* Adjust font size as needed */
+    text-shadow: 3px 3px 0 #FF00FF, /* Pink shadow on the right */
+                 -3px -3px 0 #00FFCC; /* Mint shadow on the left */
+    margin: 0;
+    padding: 0;
+    line-height: 1.1; /* Adjust line-height to reduce spacing */
+    width: 100%; /* Make sure the headline takes full width */
+    text-align: left; /* Align the headline to the left */
+}
+
+.fifth-text {
+    color: black;
+    font-size: 1.5rem;
+    margin-top: 10px; /* Reduced space between headline and sub-text */
+    font-weight: bold;
+}
+/* Sixth section */
+.six {
+    display: flex;
+    flex-direction: row;
+    height: 90vh; /* Full height of the viewport */
+    background-color: #051329;
+    padding: 0 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-six {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 50px; /* Spacing from left side */
+}
+
+.left-images {
+    display: flex;
+    gap: 10px; /* Spacing between images */
+    margin-bottom: 20px; /* Spacing below images */
+}
+
+.left-images img {
+    width: 60px;
+    height: 60px;
+}
+
+.six-headline-left {
+    color: #A0BCFF;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 7rem; /* Adjust font size as needed */
+    text-shadow: 3px 3px 0 #FF00FF, /* Pink shadow on the right */
+                 -3px -3px 0 #00FFCC; /* Mint shadow on the left */
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+    margin-bottom: 20px; /* Spacing below headline */
+    z-index: 1;
+}
+
+.six-text {
+    color: #A0BCFF;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 20px; /* Reduced space between headline and sub-text */
+}
+
+.right-six {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.main-right-image {
+    width: 140%;
+    height: auto;
+    position: relative;
+    z-index: 0;
+}
+
+.six-headline-right {
+    position: absolute;
+    color: #A0BCFF;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 4rem; /* Adjust font size as needed */
+    text-shadow: 3px 3px 0 #FF00FF, /* Pink shadow on the right */
+                 -3px -3px 0 #00FFCC; /* Mint shadow on the left */
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+    top: 20px; /* Adjust to position headline over image */
+    right: 20px; /* Adjust to position headline over image */
+}
+/* Seven section */
+.seven {
+    display: flex;
+    flex-direction: row;
+    height: 90vh; /* Full height of the viewport */
+    background-color: #1E48C1;
+    padding: 0 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-seven {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 50px; /* Spacing from left side */
+}
+
+.seven-headline-left {
+    color: #A0BCFF;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 7rem; /* Adjust font size as needed */
+    text-shadow: 3px 3px 0 #FF00FF, /* Pink shadow on the right */
+                 -3px -3px 0 #00FFCC; /* Mint shadow on the left */
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+    margin-bottom: 20px; /* Spacing below headline */
+    z-index: 1;
+}
+
+.left-images {
+    display: flex;
+    gap: 10px; /* Spacing between images */
+   margin-top: 10%;
+}
+
+.left-images img {
+    width: 60px;
+    height: 60px;
+}
+
+.seven-text {
+    color: #A0BCFF;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-top: 20px; /* Reduced space between headline and sub-text */
+}
+
+.right-seven {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.main-right-image {
+    width: 160%;
+    height: auto;
+    position: relative;
+    z-index: 0;
+}
+/* Eighth section */
+.eight {
+    display: flex;
+    flex-direction: row;
+    height: 90vh; /* Full height of the viewport */
+    background-color: #A0BCFF;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-eight {
+    position: relative;
+    flex: 1;
+    height: 100%;
+}
+
+.main-left-image {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.eight-headline-left {
+    position: absolute;
+    bottom: 20px; /* Positioning at the bottom of the image */
+    left: 20px; /* Margin from the left */
+    color: #1E48C1; /* Main color of the text */
+    font-family: 'Paytone One', sans-serif;
+    font-size: 7rem; /* Adjust font size as needed */
+    text-shadow: 3px 3px 0 #FF00FF, /* Pink shadow on the right */
+                 -3px -3px 0 #00FFCC; /* Mint shadow on the left */
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+}
+
+.right-eight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 20%; /* Spacing from left side */
+}
+
+.right-images {
+    display: flex;
+    gap: 10px; /* Spacing between images */
+    margin-bottom: 20px; /* Spacing below images */
+}
+
+.right-images img {
+    width: 60px;
+    height: 60px;
+}
+
+.eight-text {
+    color: #051329;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 50%; /* No space between images and text */
+}
+
+/* Nine section */
+.nine {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1E48C1;
+    padding: 20px;
+    color: #A0BCFF;
+}
+
+.nine-headline {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 7rem;
+    text-shadow: 3px 3px 0 #FF00FF, -3px -3px 0 #00FFCC;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.partners {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 20px;
+    width: 100%; /* Make sure grid takes full width */
+    margin-bottom: 15%;
+}
+
+.partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.partner-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.partner-name {
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Last section */
+.last {
+    height: 90vh;
+    display: flex;
+    background-color: #051329;
+    padding: 20px;
+}
+
+.left-last {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 100px; /* Adjust padding as needed */
+    position: relative;
+}
+
+.contact-image {
+    width: 160%; /* Adjust size as needed */
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -40%;
+    z-index: 0;
+}
+
+.last-headline {
+    color: #A0BCFF; /* Main color of the text */
+    font-family: 'Paytone One', sans-serif;
+    font-size: 5rem; /* Adjust font size as needed */
+    text-shadow: 3px 3px 0 #FF00FF, -3px -3px 0 #00FFCC;
+    margin-top: 50%;
+    padding: 0;
+    line-height: 1.1;
+    margin-bottom: 20px; /* Spacing below the headline */
+    z-index: 1;
+}
+
+.location-text {
+    color: #A0BCFF;
+    font-size: 1.5rem;
+    margin-bottom: 20px; /* Spacing below the location text */
+    z-index: 1;
+}
+
+.contact-icons i {
+    color: #A0BCFF;
+    font-size: 2rem; /* Adjust icon size as needed */
+    margin-right: 15px; /* Spacing between icons */
+    z-index: 1;
+}
+
+.right-last {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-right: 100px; /* Adjust padding as needed */
+}
+
+.cta-button {
+    background-color: #A0BCFF;
+    color: black;
+    border: none;
+    border-radius: 37.5px; /* Rounded corners */
+    width: 310px; /* Size as in the main section */
+    height: 75px; /* Size as in the main section */
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Paytone One", sans-serif;
+    margin-bottom: 20px; /* Spacing below the button */
+}
+
+.main-right-image-last {
+    width: 100%;
+    height: 85%;
+}
+.animate-on-scroll-mobile {
+    display: none;
+}
+
+.main-forth-image-mobile{
+    display: none;
+}
+.fifth-mobile{
+    display: none;
+}
+.eight-mobile {
+    display: none;
+}
+.contact-info-section {
+    display: none;
+}
+/* Adaptation for mobile !!!! */
+@media (max-width: 480px) {
+    .last,
+    .eight
+     {
+      display: none;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /* Full height of the viewport */
+    }
+    
+    .image {
+        flex: 0 0 70vh; /* 70% of the viewport height */
+        background: url('image/main-mobile.png') no-repeat center center;
+        background-size: cover;
+        position: relative;
+        background-position: 43%; /* chaging background posiitin to see lgoo correctly */
+    }
+    
+    .headline {
+        position: absolute;
+        bottom: 50px; /* Positioning at the bottom of the image */
+        left: 40px; /* Margin from the left to align with the text below */
+        color: #A0BCFF; /* Main color of the text */
+        font-family: 'Paytone One', sans-serif; /* Use Paytone One font */
+        font-size: 2.5rem;
+        text-shadow: 1px 1px 0 #FF00FF, /* Pink shadow on the right */
+                     -1px -1px 0 #00FFCC; /* Mint shadow on the left */
+        margin: 0;
+        padding: 0;
+       
+    }
+    
+    .top-button {
+        position: absolute;
+        top: 100px; /* Positioning at the top of the image */
+        left: 30px; /* Align with the text on the image */
+        background-color: #A0BCFF;
+        color: black;
+        border: none;
+        border-radius: 37.5px; /* Rounded corners */
+        width: 280px; /* Slightly bigger than the other button */
+        height: 70px; /* Slightly bigger than the other button */
+        font-size: 1.6rem;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: "Paytone One", sans-serif;
+    }
+    
+    .color-block {
+        flex: 0 0 30vh; /* 20% of the viewport height */
+        background-color: #1E48C1;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #A0BCFF;
+        padding-left: 10px; /* Align with the text and button on the image */
+    }
+    
+    .color-block .text {
+        display: none;
+    }
+    .color-block .animate-on-scroll-mobile {
+        color: #A0BCFF;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: "Paytone One", sans-serif;
+        display: block;
+    }
+    .cta-button {
+        background-color: #A0BCFF;
+        color: black;
+        border: none;
+        border-radius: 37.5px; /* Rounded corners */
+        width: 240px;
+        height: 60px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+       margin-left: -5%;
+        font-family: "Paytone One", sans-serif;
+    }
+    
+    .cta-button:hover {
+        background-color: #8aa4d6; /* Slightly darker shade for hover effect */
+    }
+
+ /* Styles for the second section */
+ .second {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #A0BCFF;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    padding: 0; /* Remove padding */
+}
+
+/* Styles for the left container */
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; /* Full width on mobile */
+    text-align: center; /* Center-align the text */
+    padding: 0; /* Remove padding */
+    margin-top: 10%;
+}
+
+/* Styles for the images container */
+.images-container {
+    display: flex;
+    gap: 20px; /* Gap between images */
+    margin-bottom: 20px; /* Space between images and text */
+    justify-content: center; /* Center images */
+    width: 100%; /* Ensure the images container takes full width */
+}
+
+.images-container img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Styles for the text container */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the text */
+    width: 100%; /* Ensure the text container takes full width */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* Styles for the sub-headline */
+.sub-headline {
+    color: black;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 3rem;
+    text-shadow: 3px 3px 0 #FF00FF, -3px -3px 0 #00FFCC;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure the sub-headline takes full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Styles for the sub-text */
+.sub-text {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px; /* Space between headline and sub-text */
+    text-align: center; /* Center-align the sub-text */
+    width: 100%; /* Ensure the sub-text takes full width */
+    padding: 0; /* Remove padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Styles for the right image container */
+.right-image {
+    display: flex;
+    align-items: flex-start; /* Align to the top */
+    height: auto;
+    width: 100%; /* Full width on mobile */
+    justify-content: center; /* Center the image horizontally */
+    margin-top: 2%;
+}
+
+.right-image img {
+    width: 100%; /* Full width image */
+    height: auto;
+}
+
+/* Third section */
+.third {
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #051329;
+    flex-direction: column;
+    padding: 0;
+}
+
+.left-third, .right-third {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.third-headline {
+    color: #A0BCFF; /* Main color of the text */
+    font-family: 'Paytone One', sans-serif; /* Use Paytone One font */
+    font-size: 4rem;
+    text-shadow: 3px 3px 0 #FF00FF, /* Pink shadow on the right */
+                 -3px -3px 0 #00FFCC; /* Mint shadow on the left */
+    margin: 0;
+    padding: 0;
+    line-height: 1.1; /* Adjust line-height to reduce spacing */
+    text-align: center; /* Center align the headline */
+}
+
+
+.left-third img {
+    width: 300px; 
+    height: 350px;
+    object-fit: cover; /* Ensures the image covers the given dimensions without stretching */
+    margin-top: 20px; /* Add margin to create space between text and image */
+}
+.right-third {
+    margin: 0;
+    padding: 0;
+}
+
+
+.right-third .main-right-image {
+    display: none;
+}
+
+.small-images-container {
+    display: flex;
+    gap: 20px; /* Gap between images */
+    margin-top: 20px; /* Space between main right image and small images */
+}
+
+.small-images-container img {
+    width: 50px;
+    height: 50px;
+}
+
+.third-text {
+    color: #A0BCFF;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 20px; /* Space between small images and text */
+   text-align: center;
+}
+/* forth section*/
+.forth {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #1E48C1;
+    position: relative;
+    padding: 0 20px; /* Side padding only */
+    align-items: center; /* Center the content horizontally */
+    justify-content: space-between; /* Evenly space out the content vertically */
+}
+
+/* Left container */
+.left-forth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 100%; /* Full width on mobile */
+    text-align: center; /* Center align text */
+    padding-top: 20px; /* Add some top padding */
+}
+
+/* Headline text */
+.forth-headline {
+    color: #A0BCFF;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 2.1rem; /* Adjust font size for mobile */
+    text-shadow: 1px 1px 0 #FF00FF, -1px -1px 0 #00FFCC;
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+    text-align: center; /* Ensure headline is centered */
+    margin-top: 10px; /* Reduce top margin */
+}
+
+/* Bottom left container */
+.bottom-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    margin-top: 10px; /* Reduce space between headline and small images */
+}
+
+/* Small images container */
+.small-images-container {
+    display: flex;
+    gap: 10px; /* Adjust gap for mobile */
+    margin-top: 10px; /* Reduce space between headline and small images */
+    justify-content: center; /* Center images */
+}
+
+.small-images-container img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Text container */
+.forth-text {
+    color: #A0BCFF;
+    font-weight: bold;
+    font-size: 1.2rem; /* Adjust font size for mobile */
+    margin-top: 10px; /* Reduce space between small images and text */
+    text-align: center;
+}
+
+/* Right container */
+.right-forth {
+   
+    display: none;
+}
+
+.main-forth-image {
+    width: 100%;
+    z-index: 0; /* Ensure the image stays in the background */
+}
+.main-forth-image-mobile{
+    display: block;
+    width: 100%;
+    z-index: 0;
+    margin-bottom: 40%;
+}
+/* Fifth section */
+.fifth {
+    display: none;
+}
+.fifth-mobile {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #A0BCFF;
+    align-items: center;
+    justify-content: space-between;
+}
+.fifth-headline-mobile {
+    color: blakc;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 3rem; /* Adjust font size for mobile */
+    text-shadow: 1px 1px 0 #FF00FF, -1px -1px 0 #00FFCC;
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+    text-align: center; /* Ensure headline is centered */
+    margin-top: 10px; /* Reduce top margin */
+}
+.top-fifth-mobile{
+    width: 90%;
+    display: flex;
+    flex: 1;
+    margin-top: 2%;
+}
+.top-fifth-mobile img {
+    width: 100%; /* Make the image bigger */
+    height: 100%;
+}
+.bottom-fifth-mobile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.images-container-mobile {
+    display: flex;
+    gap: 10px; /* Reduced gap between images */
+}
+
+.images-container-mobile img {
+    width: 50px;
+    height: 50px;
+}
+.fifth-text-mobile {
+    color: black;
+    font-size: 1.1rem;
+    margin-top: 4%; /* Reduced space between headline and sub-text */
+    font-weight: bold;
+   text-align: center;
+}
+
+/* SIx */
+.six {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #051329;
+    padding: 0 20px; /* Reduced padding for better fit on smaller screens */
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text horizontally */
+}
+
+.left-six {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Add padding for spacing */
+}
+
+.left-images {
+    display: flex;
+    gap: 10px; /* Spacing between images */
+    margin-bottom: 20px; /* Spacing below images */
+}
+
+.left-images img {
+    width: 50px;
+    height: 50px;
+}
+
+.six-headline-left {
+    color: #A0BCFF;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 3rem; /* Adjust font size as needed */
+    text-shadow: 1px 1px 0 #FF00FF, /* Pink shadow on the right */
+                 -1px -1px 0 #00FFCC; /* Mint shadow on the left */
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+    margin-bottom: 20px; /* Spacing below headline */
+    z-index: 1;
+}
+
+.six-text {
+    color: #A0BCFF;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px; /* Spacing between headline and text */
+}
+
+.right-six {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.main-right-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 0;
+}
+
+
+/* Seven section  */
+.seven {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #1E48C1;
+    padding: 0 20px; /* Adjust padding as needed */
+    align-items: center;
+    justify-content: center;
+}
+
+.left-seven {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px; /* Adjust padding as needed */
+}
+
+.seven-headline-left {
+    color: #A0BCFF;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 3rem; /* Adjust font size as needed */
+    text-shadow: 1px 1px 0 #FF00FF, /* Pink shadow on the right */
+                 -1px -1px 0 #00FFCC; /* Mint shadow on the left */
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+    margin-bottom: 20px; /* Spacing below headline */
+    text-align: center;
+    z-index: 1;
+}
+
+.left-images {
+    display: flex;
+    gap: 10px; /* Spacing between images */
+    margin-top: 20px; /* Adjust as needed */
+    justify-content: center;
+}
+
+.left-images img {
+    width: 50px;
+    height: 50px;
+}
+
+.seven-text {
+    color: #A0BCFF;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px; /* Reduced space between headline and sub-text */
+    text-align: center;
+}
+
+.right-seven {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.main-right-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 0;
+}
+
+/* Eight mobile section */
+.eight-mobile {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    height: 110vh; /* Full height of the viewport */
+    background-color: #A0BCFF;
+    align-items: center; /* Center-align items */
+    justify-content: center; /* Center-align items vertically */
+    padding: 20px; /* Add padding for better appearance */
+}
+
+.left-eight-mobile {
+    width: 100%; /* Full width on mobile */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    margin-bottom: 10px; /* Reduced space between image and text */
+}
+
+.main-left-image {
+    width: 100%;
+    height: auto;
+}
+
+.right-eight {
+    width: 100%; /* Full width on mobile */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align items */
+    justify-content: center;
+    padding: 0; /* Ensure no padding */
+    margin: 0; /* Ensure no margin */
+}
+
+.right-images {
+    display: flex;
+    gap: 10px; /* Spacing between images */
+    margin-bottom: 10px; /* Reduced spacing below images */
+    justify-content: center; /* Center-align images */
+}
+
+.right-images img {
+    width: 50px;
+    height: 50px;
+}
+
+.eight-headline-left-mobile {
+    color: #1E48C1; /* Main color of the text */
+    font-family: 'Paytone One', sans-serif;
+    font-size: 3rem; /* Adjust font size for mobile */
+    text-shadow: 1px 1px 0 #FF00FF, /* Pink shadow on the right */
+                 -1px -1px 0 #00FFCC; /* Mint shadow on the left */
+    margin: 10px 0; /* Reduced space above and below the headline */
+    text-align: center; /* Center-align the text */
+}
+
+.eight-text {
+    color: #051329;
+    font-size: 1.2rem; /* Adjust font size for readability on mobile */
+    font-weight: bold;
+    text-align: center; /* Center-align text */
+    margin: 10px 0; /* Reduced space above and below the text */
+}
+
+
+/* nine */
+/* Global CSS Reset */
+/* Nine section */
+.nine {
+    height: 140vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1E48C1;
+    padding: 20px;
+    color: #A0BCFF;
+}
+
+.nine-headline {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 3rem; /* Adjust font size for better fit */
+    text-shadow: 3px 3px 0 #FF00FF, -3px -3px 0 #00FFCC;
+    text-align: center;
+    margin-bottom: 20px; /* Adjust margin for better spacing */
+}
+
+.partners {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+        grid-template-rows: repeat(5, auto); /* Adjust rows for mobile */
+    gap: 10px;
+    width: 100%; /* Ensure grid takes full width */
+    height: auto; /* Adjust height to fit the grid within the section */
+}
+
+.partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.partner-logo {
+    width: 100px; /* Adjust size for better fit */
+    height: 100px; /* Adjust size for better fit */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.partner-name {
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1.2rem; /* Adjust font size for better readability */
+    font-weight: bold;
+    color: #000;
+}
+
+
+/* Contact Info Section */
+.contact-info-section {
+    height: 100vh;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #051329;
+    padding: 20px;
+}
+
+.contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center-align the text */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Optional: max-width for better control */
+}
+
+.contact-info-image {
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Adjust max-width as needed */
+    margin-bottom: 20px; /* Space between image and text */
+}
+
+.contact-info-headline {
+    color: #A0BCFF; /* Main color of the text */
+    font-family: 'Paytone One', sans-serif;
+    font-size: 3rem; /* Adjust font size for mobile */
+    text-shadow: 3px 3px 0 #FF00FF, -3px -3px 0 #00FFCC;
+    margin: 20px 0; /* Margin for spacing */
+    line-height: 1.1;
+}
+
+.contact-info-location {
+    color: #A0BCFF;
+    font-size: 1.2rem;
+    margin-bottom: 20px; /* Spacing below the location text */
+}
+
+.contact-info-icons {
+    display: flex;
+    justify-content: center; /* Center-align the icons */
+    gap: 15px; /* Spacing between icons */
+}
+
+.contact-info-icons i {
+    color: #A0BCFF;
+    font-size: 2rem; /* Adjust icon size as needed */
+}
+
+
+
+    }
+    
+
+  
