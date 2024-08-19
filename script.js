@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { threshold: 0.1 });
 
     elements.forEach((element, index) => {
-        element.style.transitionDelay = `${index * 0.1}s`;
+        element.style.transitionDelay = `${index * 0.05}s`;
         observer.observe(element);
     });
 });
